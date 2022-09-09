@@ -34,18 +34,14 @@ android {
 
 dependencies {
     implementation(project(":shared"))
-//    implementation("androidx.activity:activity-compose:1.5.1")
     implementation(ComposeUtils.activity)
-    // Signal
     implementation(Other.onesignal)
-    implementation(ArkIvanov.Decompose.decompose)
-//    implementation("com.arkivanov.decompose:decompose:0.5.1")
-    implementation(ArkIvanov.Decompose.extensionsComposeJetbrains)
     implementation(compose.foundation)
-    implementation(compose.material)
-//    implementation("androidx.window:window:1.0.0")
     //JSON
     implementation(Kotlin.serializationJson)
+    implementation("androidx.appcompat:appcompat:1.4.2")
+    implementation("com.google.android.material:material:1.4.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 //    implementation(Util.bundlizer)
 //    implementation("com.chrynan.parcelable:parcelable-core:0.4.2 (7)")
     // Navigation

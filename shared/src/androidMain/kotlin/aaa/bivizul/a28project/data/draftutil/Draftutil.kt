@@ -3,6 +3,7 @@ package aaa.bivizul.a28project.data.draftutil
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
 import android.net.ConnectivityManager
 import android.telephony.TelephonyManager
 import com.onesignal.OneSignal
@@ -15,14 +16,14 @@ actual fun getDraftmm(): String {
     return "$manufactured $model"
 }
 
-actual fun getDraftsim(contextAny: Any): String {
-    val context = contextAny as Context
+actual fun getDraftsim(draftcon: Any): String {
+    val context = draftcon as Context
     val telephonyManager = context.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
     return telephonyManager.simCountryIso
 }
 
-actual fun getDraftid(contextAny: Any): String {
-    val context = contextAny as Context
+actual fun getDraftid(draftcon: Any): String {
+    val context = draftcon as Context
     val pref = context.getSharedPreferences("apppref", Context.MODE_PRIVATE)
     var levegesid = pref.getString("leveges_key", "noleveges") ?: "noleveges"
     if (levegesid == "noleveges") {
@@ -49,9 +50,9 @@ actual fun getDraftt(): String {
     return zone
 }
 
-actual fun getDraftdlg(contextAny: Any, activityAny: Any) {
-    val context = contextAny as Context
-    val activity = activityAny as Activity
+actual fun getDraftdlg(draftcon: Any, draftact: Any) {
+    val context = draftcon as Context
+    val activity = draftact as Activity
     AlertDialog.Builder(context).apply {
         setTitle("Error, Oops ")
         setMessage("Please exit the app and try again later")
@@ -63,20 +64,20 @@ actual fun getDraftdlg(contextAny: Any, activityAny: Any) {
     }.create().show()
 }
 
-actual fun checkDraftnet(contextAny: Any): Boolean {
-    val context = contextAny as Context
+actual fun checkDraftnet(draftcon: Any): Boolean {
+    val context = draftcon as Context
     val connectivityManager =
         context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
     val networkInfo = connectivityManager.activeNetworkInfo
     return networkInfo != null && networkInfo.isConnected
 }
 
-actual fun SigDraftOff() {
+actual fun sigDraftOff() {
     OneSignal.disablePush(true)
 }
 
-actual fun ScreenDraftExit(activityAny: Any) {
-    val activity = activityAny as Activity
+actual fun screenDraftExit(draftact: Any) {
+    val activity = draftact as Activity
     activity.finish()
     System.exit(0)
 }

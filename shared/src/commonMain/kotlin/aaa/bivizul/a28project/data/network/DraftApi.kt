@@ -3,6 +3,7 @@ package aaa.bivizul.a28project.data.network
 import aaa.bivizul.a28project.data.draftutil.Draftcon.URLDRAFT
 import aaa.bivizul.a28project.data.draftutil.Draftcon.URLDRAFTKINGS
 import aaa.bivizul.a28project.data.entity.Draft
+import aaa.bivizul.a28project.data.entity.Draftkings
 import aaa.bivizul.a28project.data.entity.Draftres
 import io.ktor.client.*
 import io.ktor.client.call.*
@@ -30,10 +31,11 @@ class DraftApi {
         }
     }
 
-    suspend fun getLeverages(): Draft {
+    suspend fun getDraftkings(): Draftkings {
         val url = URLDRAFTKINGS
         val response = client.get(url)
-        val body = response.body<Draft>()
+        println("DraftApi getDraftkings : ${response.status}")
+        val body = response.body<Draftkings>()
         return body
     }
 
@@ -43,6 +45,7 @@ class DraftApi {
             contentType(Json)
             setBody(draft)
         }
+        println("DraftApi getDraftres : ${response.status}")
         val body = response.body<Draftres>()
         return body
     }

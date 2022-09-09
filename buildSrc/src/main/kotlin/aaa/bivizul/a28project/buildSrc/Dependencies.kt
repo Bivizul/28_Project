@@ -8,11 +8,12 @@ object Versions {
 
     const val constraint_layout_version = "1.1.3"
     const val coroutines_version = "1.6.4"
-    const val kotlin_version = "1.7.0"
+    const val kotlin_version = "1.7.10"
     const val agp_version = "7.2.2"
     const val desugar_version = "1.1.5"
     const val compose_multiplatform = "1.1.0"
     const val compose_version = "1.2.1"
+    const val nav_compose = "2.4.1"
     const val compose_compile_version = "1.3.0"
     const val compose_navigation = "2.5.1"
     const val compose_jetbrains = "1.2.0-alpha01-dev753"
@@ -48,10 +49,11 @@ object AndroidxSupport {
 }
 
 object JetpackCompose {
-//    const val ui = "androidx.compose.ui:ui:${Versions.compose_version}"
-//    const val uiTooling = "androidx.compose.ui:ui-tooling:${Versions.compose_version}"
-//    const val foundation = "androidx.compose.foundation:foundation:${Versions.compose_version}"
-//    const val material = "androidx.compose.material:material:${Versions.compose_version}"
+    const val ui = "androidx.compose.ui:ui:${Versions.compose_version}"
+    const val uiTooling = "androidx.compose.ui:ui-tooling:${Versions.compose_version}"
+    const val foundation = "androidx.compose.foundation:foundation:${Versions.compose_version}"
+    const val material = "androidx.compose.material:material:${Versions.compose_version}"
+    const val navigation = "androidx.navigation:navigation-compose:${Versions.nav_compose}"
 }
 
 object JetbrainsCompose {
@@ -107,14 +109,14 @@ object Util {
     const val bundlizer = "dev.ahmedmourad.bundlizer:bundlizer-core:0.7.0:${Versions.bundlizer}"
 }
 
-object Koin{
+/*object Koin{
     const val core = "io.insert-koin:koin-core:${Versions.koin_version}"
     const val android = "io.insert-koin:koin-android:${Versions.koin_version}"
     const val compat = "io.insert-koin:koin-android-compat:${Versions.koin_version}"
     const val navigation = "io.insert-koin:koin-androidx-navigation:${Versions.koin_version}"
     const val compose = "io.insert-koin:koin-androidx-compose:${Versions.koin_version}"
     const val ktor = "io.insert-koin:koin-ktor:${Versions.koin_version}"
-}
+}*/
 
 object Coil {
     const val coil = "io.coil-kt:coil:${Versions.coil_version}"
@@ -125,6 +127,7 @@ object Coil {
 //    const val decompose = "com.arkivanov.decompose:decompose:${Versions.decompose}"
 //}
 
+/*
 object ArkIvanov {
     object MVIKotlin {
         private const val VERSION = "3.0.0-beta01"
@@ -156,4 +159,4 @@ object ArkIvanov {
         private const val VERSION = "1.2.1"
         const val reaktive = "com.badoo.reaktive:reaktive:$VERSION"
     }
-}
+}*/

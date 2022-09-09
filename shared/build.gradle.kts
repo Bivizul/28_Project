@@ -6,6 +6,7 @@ plugins {
     id("org.jetbrains.compose")
 //    id("com.arkivanov.gradle.setup")
     id("kotlin-parcelize")
+    id("kotlinx-serialization")
 }
 
 kotlin {
@@ -29,6 +30,8 @@ kotlin {
                 api(compose.material)
                 // Needed only for preview.
                 implementation(compose.preview)
+                //
+                implementation(JetpackCompose.navigation)
                 //Network
                 implementation(Ktor.core)
                 implementation(Ktor.logging)
@@ -57,13 +60,13 @@ kotlin {
 //                api("me.dmdev.premo:premo:1.0.0-alpha.06")
 //                api("me.dmdev.premo:premo-navigation:1.0.0-alpha.06")
 
-                implementation(ArkIvanov.Decompose.decompose)
-                implementation(ArkIvanov.Decompose.extensionsComposeJetbrains)
-                implementation(ArkIvanov.Badoo.reaktive)
-                implementation(ArkIvanov.Essenty.lifecycle)
-//                implementation(ArkIvanov.Essenty.backHandler)
-                implementation(ArkIvanov.Essenty.stateKeeper)
-                implementation(ArkIvanov.Essenty.instanceKeeper)
+//                implementation(ArkIvanov.Decompose.decompose)
+//                implementation(ArkIvanov.Decompose.extensionsComposeJetbrains)
+//                implementation(ArkIvanov.Badoo.reaktive)
+//                implementation(ArkIvanov.Essenty.lifecycle)
+////                implementation(ArkIvanov.Essenty.backHandler)
+//                implementation(ArkIvanov.Essenty.stateKeeper)
+//                implementation(ArkIvanov.Essenty.instanceKeeper)
 //                implementation(JetbrainsCompose.compose)
 //                implementation(JetbrainsCompose.test)
 
@@ -81,6 +84,9 @@ kotlin {
                 // Coil
                 implementation(Coil.coil)
                 implementation(ComposeUtils.coil)
+                // compose
+                implementation(JetpackCompose.material)
+                implementation ("com.google.accompanist:accompanist-webview:0.26.2-beta")
             }
         }
         val androidTest by getting
@@ -116,8 +122,4 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-}
-dependencies {
-    implementation("androidx.compose.ui:ui-tooling-preview:1.2.0")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.2.0")
 }

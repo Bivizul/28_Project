@@ -4,5 +4,5 @@ import kotlinx.serialization.SerialName
 
 @kotlinx.serialization.Serializable
 data class Draftkings(
-    @SerialName("draftkings") val draftkings: ArrayList<DrafkingsItem>
+    @SerialName("draftkings") val draftkings: List<DraftkingsItem>
 )
