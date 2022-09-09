@@ -1,6 +1,6 @@
 package aaa.bivizul.a28project.android
 
-//import aaa.bivizul.a28project.draftutil.Drafcon.ONESIGNAL_APP_ID
+//import aaa.bivizul.a28project.data.draftutil.Drafcon.ONESIGNAL_APP_ID
 import android.app.Application
 import com.onesignal.OneSignal
 

@@ -5,6 +5,7 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.compose")
 //    id("com.arkivanov.gradle.setup")
+    id("kotlin-parcelize")
 }
 
 kotlin {
@@ -63,8 +64,8 @@ kotlin {
 //                implementation(ArkIvanov.Essenty.backHandler)
                 implementation(ArkIvanov.Essenty.stateKeeper)
                 implementation(ArkIvanov.Essenty.instanceKeeper)
-                implementation(JetbrainsCompose.compose)
-                implementation(JetbrainsCompose.test)
+//                implementation(JetbrainsCompose.compose)
+//                implementation(JetbrainsCompose.test)
 
             }
         }
@@ -115,4 +116,8 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+}
+dependencies {
+    implementation("androidx.compose.ui:ui-tooling-preview:1.2.0")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.2.0")
 }

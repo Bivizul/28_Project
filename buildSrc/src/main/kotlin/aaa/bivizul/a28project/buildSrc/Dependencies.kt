@@ -8,14 +8,16 @@ object Versions {
 
     const val constraint_layout_version = "1.1.3"
     const val coroutines_version = "1.6.4"
-    const val kotlin_version = "1.3.41"
+    const val kotlin_version = "1.7.0"
+    const val agp_version = "7.2.2"
     const val desugar_version = "1.1.5"
     const val compose_multiplatform = "1.1.0"
     const val compose_version = "1.2.1"
     const val compose_compile_version = "1.3.0"
     const val compose_navigation = "2.5.1"
-    const val compose_jetbrains = "1.0.0-alpha4-build348"
-    const val jetbrains_kotlin_wrappers = "0.0.1-pre.213-kotlin-1.5.10"
+    const val compose_jetbrains = "1.2.0-alpha01-dev753"
+    const val jetbrains_kotlin_wrappers = "0.0.1-pre.325-kotlin-1.6.10"
+    const val jetbrains_binary_compatibility_validator = "0.10.0"
     const val bundlizer = "0.7.0"
 //    const val decompose = "1.0.0-alpha-04"
     const val coil_version = "2.2.0"
@@ -25,7 +27,7 @@ object Versions {
     const val appcompat = "1.5.0"
     const val core_ktx_version = "1.8.0"
     const val material_design_version = "1.2.0"
-    const val onesignal_version = "[4.0.0, 4.99.99]"
+    const val onesignal_version = "4.8.2"
     const val ktor_version = "2.1.0"
     const val napier_version = "2.6.1"
     const val settings_version = "0.9"
@@ -46,16 +48,16 @@ object AndroidxSupport {
 }
 
 object JetpackCompose {
-    const val ui = "androidx.compose.ui:ui:${Versions.compose_version}"
-    const val uiTooling = "androidx.compose.ui:ui-tooling:${Versions.compose_version}"
-    const val foundation = "androidx.compose.foundation:foundation:${Versions.compose_version}"
-    const val material = "androidx.compose.material:material:${Versions.compose_version}"
+//    const val ui = "androidx.compose.ui:ui:${Versions.compose_version}"
+//    const val uiTooling = "androidx.compose.ui:ui-tooling:${Versions.compose_version}"
+//    const val foundation = "androidx.compose.foundation:foundation:${Versions.compose_version}"
+//    const val material = "androidx.compose.material:material:${Versions.compose_version}"
 }
 
 object JetbrainsCompose {
-    const val compose = "org.jetbrains.compose:compose-gradle-plugin:${Versions.compose_jetbrains}"
-    const val test = "org.jetbrains.compose.ui:ui-test-junit4:${Versions.compose_jetbrains}"
-    const val wrappers = "org.jetbrains.kotlin-wrappers:kotlin-wrappers-bom:${Versions.jetbrains_kotlin_wrappers}"
+//    const val compose = "org.jetbrains.compose:compose-gradle-plugin:${Versions.compose_jetbrains}"
+//    const val test = "org.jetbrains.compose.ui:ui-test-junit4:${Versions.compose_jetbrains}"
+//    const val wrappers = "org.jetbrains.kotlin-wrappers:kotlin-wrappers-bom:${Versions.jetbrains_kotlin_wrappers}"
 }
 
 object ComposeUtils {
@@ -85,7 +87,9 @@ object Ktor {
 }
 
 object Kotlin {
-    const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin_version}"
+//    const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin_version}"
+    const val wrappers = "org.jetbrains.kotlin-wrappers:kotlin-wrappers-bom:${Versions.jetbrains_kotlin_wrappers}"
+    const val validator = "org.jetbrains.kotlinx:binary-compatibility-validator:${Versions.jetbrains_binary_compatibility_validator}"
     const val serializationJson =
         "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.serialization_version}"
     const val serializationProtobuf =
@@ -133,14 +137,15 @@ object ArkIvanov {
     }
 
     object Decompose {
-        private const val VERSION = "0.5.1"
+//        private const val VERSION = "0.5.1"
 //        private const val VERSION = "1.0.0-alpha-04-native-compose"
+        private const val VERSION = "1.0.0-alpha-04"
         const val decompose = "com.arkivanov.decompose:decompose:$VERSION"
         const val extensionsComposeJetbrains = "com.arkivanov.decompose:extensions-compose-jetbrains:$VERSION"
     }
 
     object Essenty {
-        private const val VERSION = "0.2.2"
+        private const val VERSION = "0.5.2"
         const val lifecycle = "com.arkivanov.essenty:lifecycle:$VERSION"
         const val stateKeeper = "com.arkivanov.essenty:state-keeper:$VERSION"
         const val instanceKeeper = "com.arkivanov.essenty:instance-keeper:$VERSION"
@@ -148,7 +153,7 @@ object ArkIvanov {
     }
 
     object Badoo{
-        private const val VERSION = "1.2.0"
+        private const val VERSION = "1.2.1"
         const val reaktive = "com.badoo.reaktive:reaktive:$VERSION"
     }
 }
