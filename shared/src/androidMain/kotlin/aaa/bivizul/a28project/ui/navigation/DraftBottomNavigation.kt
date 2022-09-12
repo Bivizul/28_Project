@@ -16,18 +16,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-
-//fun Tab.icon(): ImageVector {
-//    return when (this) {
-//        Tab.Tab1 -> Icons.Filled.Home
-//        Tab.Tab2 -> Icons.Filled.Call
-//        Tab.Tab3 -> Icons.Filled.Info
-//    }
-//}
 
 fun Tab.id(): Int {
     return when (this) {
@@ -71,21 +63,17 @@ fun DraftBottomNavigationData(
     Scaffold(
         bottomBar = {
             BottomNavigation {
-                val navBackStackEntry by navController.currentBackStackEntryAsState()
                 val currentRoute = navController.currentBackStackEntry?.destination?.route
                 Tab.values().forEach { screen ->
                     BottomNavigationItem(
                         icon = {
                             Text(
-                                list[screen.id()].title,
+                                text = list[screen.id()].title,
+                                modifier = Modifier.padding(4.dp),
                                 style = TextStyle(color = Color.White),
                                 textAlign = TextAlign.Center
                             )
                                },
-//                        label = { Text(screen.toString(), style = TextStyle(color = Color.White)) },
-//                        label = {
-//
-//                        },
                         selected = currentRoute == screen.toString(),
                         onClick = {
                             navController.navigate(screen.toString()) {
@@ -117,7 +105,6 @@ fun DraftBottomNavigationData(
                         }
                     })
                 }
-
             }
         }
     }

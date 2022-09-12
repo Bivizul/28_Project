@@ -3,7 +3,6 @@ package aaa.bivizul.a28project.data.draftutil
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
-import android.content.Intent
 import android.net.ConnectivityManager
 import android.telephony.TelephonyManager
 import com.onesignal.OneSignal

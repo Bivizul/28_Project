@@ -1,7 +1,6 @@
 package aaa.bivizul.a28project.data.repository
 
 import aaa.bivizul.a28project.data.entity.Draft
-import aaa.bivizul.a28project.data.entity.Draftkings
 import aaa.bivizul.a28project.data.entity.Draftres
 import aaa.bivizul.a28project.data.network.DraftApi
 import kotlinx.coroutines.flow.MutableSharedFlow

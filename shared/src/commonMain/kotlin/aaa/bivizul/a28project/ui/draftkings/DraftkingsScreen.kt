@@ -10,7 +10,6 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import io.ktor.http.ContentType.Text.Html
 
 @Composable
 fun DraftkingsScreen(
@@ -22,7 +21,7 @@ fun DraftkingsScreen(
         Text(text = draftkingsItem.description)
         LazyColumn(verticalArrangement = Arrangement.spacedBy(6.dp)) {
             items(items = draftkingsItem.inwards){inward->
-                Text("${inward.id} ${inward.subtitle} ${inward.text}")
+                Text("${inward.id}) ${inward.subtitle} ${inward.text}")
             }
         }
     }

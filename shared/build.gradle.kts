@@ -4,7 +4,6 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("org.jetbrains.compose")
-//    id("com.arkivanov.gradle.setup")
     id("kotlin-parcelize")
     id("kotlinx-serialization")
 }
@@ -28,47 +27,19 @@ kotlin {
                 api(compose.runtime)
                 api(compose.foundation)
                 api(compose.material)
-                // Needed only for preview.
                 implementation(compose.preview)
-                //
                 implementation(JetpackCompose.navigation)
-                //Network
                 implementation(Ktor.core)
                 implementation(Ktor.logging)
                 implementation(Ktor.negotiation)
                 implementation(Ktor.json)
                 implementation(Ktor.cio)
-                //Coroutines
                 implementation(KotlinCoroutines.core)
-                //Logger
                 implementation(Util.napier)
-                //JSON
                 implementation(Kotlin.serializationJson)
                 implementation(Kotlin.serializationProtobuf)
-                //Key-Value storage
                 implementation(Util.settings)
-                // DI
-//            implementation(Koin.core)
-//            implementation(Koin.android)
-                // Signal
                 implementation(Other.onesignal)
-                // Navigation
-
-//                implementation("io.github.alexgladkov:odyssey-core:1.0.0-beta15") // For core classes
-//                implementation("io.github.alexgladkov:odyssey-compose:1.0.0-beta15") // For compose extensions
-
-//                api("me.dmdev.premo:premo:1.0.0-alpha.06")
-//                api("me.dmdev.premo:premo-navigation:1.0.0-alpha.06")
-
-//                implementation(ArkIvanov.Decompose.decompose)
-//                implementation(ArkIvanov.Decompose.extensionsComposeJetbrains)
-//                implementation(ArkIvanov.Badoo.reaktive)
-//                implementation(ArkIvanov.Essenty.lifecycle)
-////                implementation(ArkIvanov.Essenty.backHandler)
-//                implementation(ArkIvanov.Essenty.stateKeeper)
-//                implementation(ArkIvanov.Essenty.instanceKeeper)
-//                implementation(JetbrainsCompose.compose)
-//                implementation(JetbrainsCompose.test)
 
             }
         }
@@ -86,7 +57,6 @@ kotlin {
                 implementation(ComposeUtils.coil)
                 // compose
                 implementation(JetpackCompose.material)
-                implementation ("com.google.accompanist:accompanist-webview:0.26.2-beta")
             }
         }
         val androidTest by getting
